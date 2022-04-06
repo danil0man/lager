@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 import config from '../config/config.json';
 
 function StockList() {
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState<any[]>([]);
 
     useEffect(() => {
         fetch(

@@ -4,6 +4,7 @@ import {
     StyleSheet,
     Text,
     View,
+    ScrollView,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import warhammer from './assets/warhammer.jpg';
@@ -21,10 +22,10 @@ export default function App() {
     }
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.base}>
+            <ScrollView style={styles.base}>
                 <Text
                     style={{
-                        color: '#33c',
+                        color: '#394B7A',
                         fontSize: 42,
                         textAlign: 'center',
                         fontFamily: 'cAntique',
@@ -37,11 +38,14 @@ export default function App() {
                     style={{
                         width: 320,
                         height: 240,
+                        borderRadius: 20,
+                        borderWidth: 2,
+                        borderColor: '#436E0F',
                     }}
                 />
                 <Stock />
                 <StatusBar style="auto" />
-            </View>
+            </ScrollView>
         </SafeAreaView>
     );
 }
@@ -49,10 +53,10 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#E0D3AF',
     },
     base: {
         flex: 1,
-        backgroundColor: '#fff',
         paddingLeft: 12,
         paddingRight: 12,
         fontFamily: 'cAntique',
